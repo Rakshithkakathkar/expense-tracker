@@ -1,3 +1,11 @@
+<h2>My Stocks</h2>
+<ul class="stocks">
+    <li *ngFor="let stock of stocks">
+        <span class="badge">{{stock.name}}</span>Qty: {{stock.quantity}}
+    </li>
+
+</ul>
+<!-- 
 <h2>{{stock.name}} Details</h2>
 <div><span>Name: </span>{{stock.name}}</div>
 <div><span>Qty: </span>{{stock.quantity}}</div>
@@ -6,4 +14,4 @@
 <div>
     <label for="quantity">Stock quantity: </label>
     <input id="quantity" [(ngModel)]="stock.quantity" placeholder="qty">
-</div>
+</div> -->
