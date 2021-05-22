@@ -1,0 +1,9 @@
+<h2>{{stock.name}} Details</h2>
+<div><span>Name: </span>{{stock.name}}</div>
+<div><span>Qty: </span>{{stock.quantity}}</div>
+<div><span>Price: </span>{{stock.price}}</div>
+
+<div>
+    <label for="quantity">Stock quantity: </label>
+    <input id="quantity" [(ngModel)]="stock.quantity" placeholder="qty">
+</div>
