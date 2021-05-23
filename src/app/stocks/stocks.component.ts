@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IStock } from '../stock';
-import { STOCKS } from '../mock-stocks';
+import { StockService } from '../stock.service';
 
 @Component({
   selector: 'app-stocks',
@@ -9,11 +9,17 @@ import { STOCKS } from '../mock-stocks';
 })
 export class StocksComponent implements OnInit {
 
-  stocks = STOCKS;
+  stocks: IStock[] =[];
   selectedStock?: IStock;
-  constructor() { }
+  constructor(private stockService: StockService) { }
 
   ngOnInit(): void {
+    this.getStocks();
+  }
+
+  getStocks(): void {
+    this.stockService.getStocks()
+      .subscribe(stocks => this.stocks = stocks);
   }
 
   onSelect(stock: IStock): void {
