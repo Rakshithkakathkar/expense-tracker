@@ -3,18 +3,6 @@
     <li *ngFor="let stock of stocks" (click)="onSelect(stock)" [class.selected]="stock === selectedStock">
         <span class="badge">{{stock.name}}</span>Qty: {{stock.quantity}}
     </li>
-
 </ul>
 
-<div *ngIf="selectedStock">
-    <h2>{{selectedStock.name}} Details</h2>
-    <div><span>Name: </span>{{selectedStock.name}}</div>
-    <div><span>Qty: </span>{{selectedStock.quantity}}</div>
-    <div><span>Price: </span>{{selectedStock.price}}</div>
-
-    <div>
-        <label for="stock-quantity">Stock quantity: </label>
-        <input id="stock-quantity" [(ngModel)]="selectedStock.quantity" placeholder="qty">
-    </div>
-
-</div>
+<app-stock-detail [stock]="selectedStock"></app-stock-detail>
