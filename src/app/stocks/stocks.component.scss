@@ -3,13 +3,12 @@
     margin: 0 0 2em 0;
     list-style-type: none;
     padding: 0;
-    width: 15em;
+    width: 17em;
   }
   .stocks li {
     cursor: pointer;
     position: relative;
     left: 0;
-    background-color: #EEE;
     margin: .5em;
     padding: .3em 0;
     height: 1.6em;
@@ -17,11 +16,10 @@
   }
   .stocks li:hover {
     color: #2c3a41;
-    background-color: #e6e6e6;
     left: .1em;
   }
 
-  .heroes a {
+  .stocks a {
     color: #333;
     text-decoration: none;
     background-color: #EEE;
@@ -72,5 +70,30 @@
   
   input {
     padding: .5rem;
+  }
+
+  .add-button {
+    padding: .5rem 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+   }
+
+  .add-button:hover {
+    color: white;
+    background-color: #42545C;
+  }
+  
+  button.delete {
+    position: absolute;
+    left: 210px;
+    top: 18px;
+    background-color: white;
+    color:  #525252;
+    padding: 1px 10px 3px 10px;
+  }
+  
+  button.delete:hover {
+    background-color: #525252;
+    color: white;
   }
 

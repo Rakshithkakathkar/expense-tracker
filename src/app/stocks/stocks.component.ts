@@ -21,4 +21,18 @@ export class StocksComponent implements OnInit {
       .subscribe(stocks => this.stocks = stocks);
   }
 
+  add(name: any, avgPrice: any, quantity: any): void {
+    name = name.trim();
+    if(!name || !avgPrice || !quantity) { return; }
+    this.stockService.addStock( { name, avgPrice, quantity } as IStock)
+      .subscribe(stock => {
+        this.stocks.push(stock);
+      })
+  }
+
+  delete(stock: IStock): void {
+    this.stocks = this.stocks.filter(s => s!== stock);
+    this.stockService.deleteStock(stock.id).subscribe();
+  }
+
 }

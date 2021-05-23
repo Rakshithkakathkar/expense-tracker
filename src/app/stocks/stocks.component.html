@@ -4,5 +4,18 @@
         <a routerLink='/detail/{{stock.id}}'>
             <span class="badge">{{stock.name}}</span>Qty: {{stock.quantity}}
         </a>
+        <button class="delete" title="delete stock" (click)="delete(stock)">
+            X
+        </button>
     </li>
 </ul>
+
+<div>
+    <label for="new-stock-name">Stock name: </label>
+    <input id="new-stock-name" #stockName />
+    <label for="new-stock-price">Stock Avg.price: </label>
+    <input id="new-stock-price" #stockPrice />
+    <label for="new-stock-qty">Stock Quantity: </label>
+    <input id="new-stock-qty" #stockQty />
+    <button class="add-button" (click)="add(stockName.value, stockPrice.value, stockQty.value); stockName.value=''; stockPrice.value=''; stockQty.value=''">Add Stock</button>
+</div>
