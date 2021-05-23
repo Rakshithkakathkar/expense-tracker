@@ -1,8 +1,8 @@
 <h2>My Stocks</h2>
 <ul class="stocks">
-    <li *ngFor="let stock of stocks" (click)="onSelect(stock)" [class.selected]="stock === selectedStock">
-        <span class="badge">{{stock.name}}</span>Qty: {{stock.quantity}}
+    <li *ngFor="let stock of stocks">
+        <a routerLink='/detail/{{stock.id}}'>
+            <span class="badge">{{stock.name}}</span>Qty: {{stock.quantity}}
+        </a>
     </li>
 </ul>
-
-<app-stock-detail [stock]="selectedStock"></app-stock-detail>

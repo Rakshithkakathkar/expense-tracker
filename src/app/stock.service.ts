@@ -14,4 +14,9 @@ export class StockService {
     const stocks = of(STOCKS);
     return stocks;
   }
+
+  getStock(id: number): Observable<IStock> {
+    const stock = STOCKS.find(s => s.id === id)!;
+    return of(stock);
+  }
 }

@@ -20,6 +20,28 @@
     background-color: #e6e6e6;
     left: .1em;
   }
+
+  .heroes a {
+    color: #333;
+    text-decoration: none;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+  }
+  
+  .stocks a:hover {
+    color: #2c3a41;
+    background-color: #e6e6e6;
+  }
+  
+  .stocks a:active {
+    background-color: #525252;
+    color: #fafafa;
+  }
   .stocks li.selected {
     background-color: black;
     color: white;
