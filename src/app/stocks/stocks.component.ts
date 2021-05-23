@@ -10,10 +10,14 @@ import { STOCKS } from '../mock-stocks';
 export class StocksComponent implements OnInit {
 
   stocks = STOCKS;
+  selectedStock?: IStock;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onSelect(stock: IStock): void {
+    this.selectedStock = stock;
+  }
 
 }
