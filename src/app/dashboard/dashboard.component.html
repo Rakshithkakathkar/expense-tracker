@@ -3,7 +3,9 @@
 <div class="stocks-menu">
     <a *ngFor="let stock of stocks"
         routerLink="/detail/{{stock.id}}">
-        {{stock.name}}
+        {{stock.name}} 
+        <div>
+            Rs.{{(stock.investedAmt)}}
+        </div>
     </a>
 </div>
-
