@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { IStock } from './stock';
-import { STOCKS } from './mock-stocks';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
@@ -48,6 +47,15 @@ export class StockService {
 
     return this.http.delete<IStock>(url, this.httpOptions).pipe(
       catchError(this.handleError<IStock>('deleteStock'))
+    );
+  }
+
+  searchStocks(term: string) : Observable<IStock[]> {
+    if(!term.trim()){
+      return of([]);
+    }
+    return this.http.get<IStock[]>(`${this.stocksUrl}/?name=${term}`).pipe(
+      catchError(this.handleError<IStock[]>('searchStocks', []))
     );
   }
 

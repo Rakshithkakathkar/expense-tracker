@@ -1,3 +1,23 @@
+<div>
+    <div class="input-container"> 
+        <div class="label-container">
+            <label for="new-stock-name">Stock name: </label>
+            <label for="new-stock-price">Stock Avg.price: </label>
+            <label for="new-stock-qty">Stock Quantity: </label>
+        </div>
+        <div class="add-stock">
+            <input id="new-stock-name" #stockName />
+            <input id="new-stock-price" #stockPrice />
+            <input id="new-stock-qty" #stockQty />
+        </div>    
+    </div>
+
+    <button class="add-button"
+        (click)="add(stockName.value, stockPrice.value, stockQty.value); stockName.value=''; stockPrice.value=''; stockQty.value=''">Add
+        Stock
+    </button>
+</div>
+
 <h2>My Stocks</h2>
 <ul class="stocks">
     <li *ngFor="let stock of stocks">
@@ -9,25 +29,3 @@
         </button>
     </li>
 </ul>
-
-
-<div class="input-container">
-    <div>
-        <label for="new-stock-name">Stock name: </label>
-        <input id="new-stock-name" #stockName />
-    </div>
-    <div>
-        <label for="new-stock-price">Stock Avg.price: </label>
-        <input id="new-stock-price" #stockPrice />
-    </div>
-    <div>
-        <label for="new-stock-qty">Stock Quantity: </label>
-        <input id="new-stock-qty" #stockQty />
-    </div>
-    <div>
-        <button class="add-button"
-            (click)="add(stockName.value, stockPrice.value, stockQty.value); stockName.value=''; stockPrice.value=''; stockQty.value=''">Add
-            Stock
-        </button>
-    </div>
-</div>

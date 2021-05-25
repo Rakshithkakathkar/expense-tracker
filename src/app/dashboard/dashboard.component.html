@@ -1,7 +1,9 @@
-<h2>Most brought Stocks</h2>
+<h2>Most invested Stocks</h2>
 <div class="stocks-menu">
     <a *ngFor="let stock of stocks"
         routerLink="/detail/{{stock.id}}">
         {{stock.name}}
     </a>
 </div>
+
+<app-stock-search></app-stock-search>

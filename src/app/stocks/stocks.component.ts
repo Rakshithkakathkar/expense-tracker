@@ -24,7 +24,8 @@ export class StocksComponent implements OnInit {
   add(name: any, avgPrice: any, quantity: any): void {
     name = name.trim();
     if(!name || !avgPrice || !quantity) { return; }
-    this.stockService.addStock( { name, avgPrice, quantity } as IStock)
+    let investedAmt = avgPrice * quantity; 
+    this.stockService.addStock( { name, avgPrice, quantity, investedAmt } as IStock)
       .subscribe(stock => {
         this.stocks.push(stock);
       })

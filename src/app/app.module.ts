@@ -9,12 +9,14 @@ import { StockDetailComponent } from './stock-detail/stock-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { StockSearchComponent } from './stock-search/stock-search.component';
 @NgModule({
   declarations: [
     AppComponent,
     StocksComponent,
     StockDetailComponent,
     DashboardComponent,
+    StockSearchComponent,
   ],
   imports: [
     BrowserModule,

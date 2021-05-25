@@ -3,4 +3,5 @@ export interface IStock{
     name: string;
     quantity: number;
     avgPrice: number;
+    investedAmt : number;
 }

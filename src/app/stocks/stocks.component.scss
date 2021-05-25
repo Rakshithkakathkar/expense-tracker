@@ -76,7 +76,6 @@
     padding: .5rem 1.5rem;
     font-size: 1rem;
     margin-bottom: 2rem;
-    margin-left: 2rem;
    }
 
   .add-button:hover {
@@ -100,5 +99,17 @@
 
   .input-container{
     display: flex;
+    margin: 10px 0px;
+  }
+
+  .label-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .add-stock {
+    display: flex;
+    flex-direction: column;
   }
 

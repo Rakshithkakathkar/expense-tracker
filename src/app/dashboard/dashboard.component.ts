@@ -10,6 +10,7 @@ import { StockService } from '../stock.service';
 export class DashboardComponent implements OnInit {
 
   stocks: IStock[] = [];
+  topFiveStocks: IStock[] = [];
 
   constructor(private stockService: StockService) { }
 
@@ -20,8 +21,12 @@ export class DashboardComponent implements OnInit {
   getStocks(): void {
     this.stockService.getStocks()
       .subscribe(data => {
-        this.stocks = data.slice(0,5);
+        this.sortByPrice(data);
       });
   }
 
+  sortByPrice(stocks: IStock[]) : IStock[]{
+    stocks.sort((a,b) => {return b.investedAmt - a.investedAmt})
+    return this.stocks = stocks.splice(0,5);
+  }
 }
