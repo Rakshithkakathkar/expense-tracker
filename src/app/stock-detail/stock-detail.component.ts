@@ -34,6 +34,7 @@ export class StockDetailComponent implements OnInit {
 
   save(): void {
     if(this.stock){
+      this.stock.investedAmt = this.stock.avgPrice * this.stock.quantity;
       this.stockService.updateStock(this.stock)
         .subscribe(() => this.goBack());
     }
