@@ -1,6 +1,6 @@
 .search-container{
     padding: 0;
-    margin: auto;
+    margin-top: 20px;
     width: 100%;
   
     /* flexbox */
@@ -22,10 +22,11 @@ label {
   }
   input {
     padding: .5rem;
-    width: 100%;
+    width: 75vw;
     max-width: 600px;
     box-sizing: border-box;
     display: block;
+    text-align:center;
   }
   
   input:focus {
