@@ -1,3 +1,17 @@
+.search-container{
+    padding: 0;
+    margin: auto;
+    width: 100%;
+  
+    /* flexbox */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
 label {
     display: block;
     font-weight: bold;
